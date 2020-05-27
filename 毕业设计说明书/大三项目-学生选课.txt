@@ -1,0 +1,32 @@
+学生端：登录，账号信息（修改密码等），我的选课（删除），选课列表（查询，选课）；
+老师端：登录，账号信息（修改密码等），我的授课（设置课程），选课列表（查询）；
+
+管理端：登录，账号信息（修改密码等），班级管理（增删查改），课程管理（设置课程信息，选课设置），用户管理（账号添加，查看），
+
+
+学生表
+学号（主键）StuID，专业号（外键）MajorID，姓名 StuName，性别 StuSex，密码StuPwd，联系 StuTel，班级
+
+教师表
+教师编号（主键）TeaID，系部号码（外键） DepartmentID，姓名 TeaName，性别TeaSex，密码TeaPwd，联系TeaTel
+
+管理员表
+管理员编号（主键）AdminID，姓名 AdminName，性别 AdminSex，密码 AdminPwd，联系 AdminTel，权限 Jurisdiction
+
+班级表
+班级编号（主键）GradeID，班级名 GradeName
+
+专业表
+专业号（主键）MajorID，系号码（外键）DepartmentID，专业名 MajorName
+
+院系表
+系号码（主键）DepartmentID，系部名称 DepartmentName
+
+课程表
+课程号（主键）CourseID，课程名 CourseName，课程介绍 Introduce，上课地点 Class address，课程人数 CourseNum，已选人数 SelectedNum， 课程起始时间 CourseStart，课程截止时间 CourseEnd，学分 Credit，状态 State
+
+选课信息表
+选课编号（主键）ChoiceID，学号（外键）StuID，课程号（外键）CourseID，教师号（外键）TeaID，选课数量 ChoiceNum
+
+信息反馈表
+反馈编号 FeedID，反馈者（学生/老师）Feeders，反馈内容 Content，反馈结果 Results，时间 FeedTime
